@@ -34,5 +34,19 @@ def listarProducto(request):
 
     return render_to_response('producto.html', { 'productos' : p })
 
+def listarCompra(request):
+
+	 if request.GET.get('id'):
+
+	    	idCompra = request.GET.get('id')
+
+	    	c = Compra.objects.filter(id=idCompra)
+
+
+	 else:
+
+	    	  c = Compra.objects.all()
+
+	 return render_to_response('compra.html', { 'compras' : c })
 
 
