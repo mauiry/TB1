@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Compras</title>
+
+<script type="text/javascript" src="{% static "molestar.js" %}"></script>
+
+  </head>
+
+  <body>
+
+    {% for c in compras %}
+    		{{c.Persona}} - {{c.Producto}} - {{c.Fecha}} - {{c.Hora}}  <br>
+    	{% endfor %}
+
+  </body>
+
+</html>
+
